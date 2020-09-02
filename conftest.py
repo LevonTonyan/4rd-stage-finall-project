@@ -34,5 +34,5 @@ def browser(request):
         raise pytest.UsageError("--page language should be en, fr, ru or es")
     yield browser
     print("\nquit browser..")
-    time.sleep(10)
+    time.sleep(1)
     browser.quit()
