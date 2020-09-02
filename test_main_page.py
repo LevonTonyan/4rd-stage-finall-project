@@ -1,4 +1,5 @@
 from Pages.main_page import MainPage
+from Pages.login_page import LoginPage
 
 
 
@@ -13,3 +14,5 @@ def test_guest_should_see_login_link(browser):
     page = MainPage(browser, link)
     page.open()
     page.should_be_login_link()
+
+def test_guest_shoul_see_login_form(browser):
