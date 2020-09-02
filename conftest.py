@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import time
 
 
 
@@ -33,4 +34,5 @@ def browser(request):
         raise pytest.UsageError("--page language should be en, fr, ru or es")
     yield browser
     print("\nquit browser..")
+    time.sleep(10)
     browser.quit()
